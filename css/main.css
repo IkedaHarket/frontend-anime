@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+}
+/* BOTON */
+.boton{
+    color: #fff;
+    background-color: #6340b8;
+    transition: .3s ease all;
+    padding: 10px 15px;
+    border: none;
+    font-size: 18px;
+    border: 2px solid #6340b8;
+}
+.boton:hover{
+    background-color: transparent;
+    /* background-color: #ecb8f8; */
+    border: 2px solid #6340b8;;
+    color: #6340b8;
+}
+.boton:focus{
+    outline: none;
+}
+/* ENLACE */
+.enlace{
+    display: inline-block;
+}
+.enlace a{
+    display: inline-block;
+    color: #6340b8;
+    font-size: 20px;
+    transition: .3s ease all;
+}
+.enlace a:hover{
+    text-decoration: none;
+    transform: scale(1.1);
+}
+/* HEADER */
+.header{
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/fondo2.jpg');
+    background-position: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.btn__header{
+    width: 300px;
+    margin: auto;
+    font-size: 20px;
+
+}
+.btn__header:hover{
+    background-color: #fff5;
+}
+.header__header{
+    position: absolute;
+    width: 100vw;
+    height: 100px;
+    box-shadow: 1px 1px 10px #fff;
+    background-color: #0005;
+    transition: .5s ease all;
+}
+.header__fixed{
+    z-index: 10000;
+    position: fixed;
+    background-color: #000;
+    height: 80px;
+    box-shadow: none;
+}
+.header__titulo{
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav__ul{
+    list-style: none;
+    margin: auto;
+}
+.nav__item{
+    display: inline-block;
+}
+.nav__item a{
+    color: #fff;
+    font-size: 24px;
+    margin: 0 25px;
+}
+/* HOME */
+.home{
+    height: 100vh;
+}
+.home__texto h3{
+    color: #222;
+}
+.home__texto p{
+    margin-bottom: 50px;
+}
+.home__img{
+
+    width: 70%;
+    height: 100%;
+}
+.home__img img{
+    width: 100%;
+    height: 100%;
+}
+.home__texto{
+    padding: 150px 50px;
+}
+.home__boton{
+    width: 300px;
+}
+/* TIENDA */
+
+.banner{
+    width: 100vw;
+    height: 500px;
+    box-shadow: 2px 2px 10px #000;
+    overflow: hidden;
+}
+.banner__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* GALERIA */
+.galeria{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.galeria__titulo h4{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.galeria__grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    grid-gap: 20px;
+}
+.galeria__grid-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: .5s ease all;
+}
+.galeria__grid-item:hover > img{
+    box-shadow: 1px 1px 5px #000;
+    
+}
+.galeria__grid-item img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: .5s ease all;
+}
+.btn__galeria{
+    width: 200px;
+}
+.contacto{
+    height: 100vh;
+    overflow: hidden;
+}
+.contacto__img{
+    height: 100%;
+}
+.contacto__img img{
+    height: 100%;
+    object-fit: cover;
+}
+.contacto__texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contacto__texto form{
+    display: flex;
+    flex-direction: column;
+}
+.contacto__texto form input[type="text"]{
+    width: 400px;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.contacto__texto form textarea{
+    height: 100px;
+    width: 400px;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    outline: none;
+    resize: none;
+}
+
+
+@media screen and (max-width:1350px){
+    .nav__item a{
+        margin: 0 5px;
+
+    }
+}
+
+@media screen and (max-width:700px){
+    .home{
+        padding: 0;
+        margin: 0;
+        height: 80vh;
+    }
+    .home__texto{
+        padding: 100px 20px;
+        text-align: center;
+    }
+    .banner{
+        display: none;
+    }
+    .nav__item a{
+        margin: 0 5px;
+
+    }
+    .contacto__texto h3{
+        margin-bottom: 50px;
+    }
+}
